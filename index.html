@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Music Player UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="player">
+  <div class="album">
+    <img src="https://i.imgur.com/8Km9tLL.jpg" alt="Album Art">
+  </div>
+
+  <div class="song-info">
+    <h2>Night Drive</h2>
+    <p>Lo-Fi Beats</p>
+  </div>
+
+  <!-- Progress -->
+  <div class="progress-container">
+    <span>0:45</span>
+    <div class="progress-bar">
+      <div class="progress"></div>
+    </div>
+    <span>3:20</span>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <button>⏮</button>
+
+    <!-- Play/Pause CSS Toggle -->
+    <input type="checkbox" id="play">
+    <label for="play" class="play-btn"></label>
+
+    <button>⏭</button>
+  </div>
+
+  <!-- Volume -->
+  <div class="volume">
+    🔊
+    <input type="range">
+  </div>
+</div>
+
+</body>
+</html>

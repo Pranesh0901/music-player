@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(135deg, #1f1c2c, #928dab);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.player {
+  width: 320px;
+  background: #111;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+}
+
+.album img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.song-info {
+  text-align: center;
+  margin: 15px 0;
+}
+
+.song-info h2 {
+  font-size: 20px;
+}
+
+.song-info p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: #333;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  width: 40%;
+  height: 100%;
+  background: #1db954;
+  animation: progressMove 8s linear infinite;
+}
+
+@keyframes progressMove {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  margin: 20px 0;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.controls button:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+#play {
+  display: none;
+}
+
+.play-btn {
+  width: 55px;
+  height: 55px;
+  background: #1db954;
+  border-radius: 50%;
+  cursor: pointer;
+  position: relative;
+}
+
+.play-btn::before {
+  content: "▶";
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+}
+
+#play:checked + .play-btn::before {
+  content: "⏸";
+  left: 50%;
+}
+
+.volume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.volume input {
+  width: 100%;
+}
